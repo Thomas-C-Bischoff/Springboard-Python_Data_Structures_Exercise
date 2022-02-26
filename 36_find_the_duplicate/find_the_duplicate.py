@@ -13,3 +13,8 @@ def find_the_duplicate(nums):
         >>> find_the_duplicate([2, 1, 3, 4]) is None
         True
     """
+    copy = nums.copy()
+    copy.sort()
+    for index in range(len(copy) - 1) :
+        if copy[index] == copy[index + 1]:
+            return copy[index]
